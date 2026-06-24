@@ -1,0 +1,1 @@
+SELECT id, email, password_hash, role FROM Users WHERE email = ?

@@ -1,0 +1,53 @@
+/* Центрирование страницы */
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #1e1e1e;
+    color: #ddd;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Обертка */
+.page_wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Основной блок */
+.payment_box {
+    background-color: #2a2a2a;
+    padding: 32px;
+    border-radius: 16px;
+    width: 360px;
+    border: 1px solid #333;
+    box-shadow: 0 0 20px rgba(0,0,0,0.35);
+    text-align: center;
+}
+
+/* Заголовок */
+.payment_title {
+    font-size: 22px;
+    margin-bottom: 24px;
+}
+
+/* Кнопка */
+.payment_btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.payment_btn:hover {
+    background-color: #5952e0;
+}

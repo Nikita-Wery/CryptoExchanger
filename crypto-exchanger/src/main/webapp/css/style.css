@@ -1,0 +1,161 @@
+/* Общие стили */
+body {
+    background-color: #1e1e1e;
+    color: #ddd;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+}
+
+.header {
+    background-color: #2a2a2a;
+    border-bottom: 1px solid #333;
+}
+
+.header_logo .logo {
+    width: 32px;
+    height: 32px;
+}
+
+.nav-link {
+    color: #aaa !important;
+    margin: 0 6px;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+}
+
+.exchange {
+    background-color: #1e1e1e;
+}
+
+.exchange-box {
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    flex: 1;
+    min-width: 300px;
+}
+
+.form-control {
+    background-color: #2a2a2a; /* немного светлее, чтобы выделялся на фоне */
+    border: 1px solid #444;
+    color: #e0e0e0; /* чуть светлее текст */
+    transition: all 0.2s ease;
+}
+
+.form-control::placeholder {
+    color: #888; /* читаемый, но не яркий */
+    opacity: 1; /* чтобы не был полупрозрачным */
+}
+
+.form-control:focus {
+    background-color: #323232; /* чуть светлее при фокусе */
+    border-color: #6c63ff;
+    color: #fff;
+    box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.25);
+}
+
+/* Фильтры валют */
+.currency-filter .btn {
+    color: #ddd;
+    border-color: #555;
+    background-color: #2a2a2a;
+    transition: all 0.2s ease;
+}
+
+/* Основная выделенная кнопка */
+.currency-filter .btn.btn-accent {
+    background-color: #6c63ff;
+    color: #fff;
+    border-color: #6c63ff;
+}
+
+/* При наведении на невыделенную кнопку */
+.currency-filter .btn:not(.btn-accent):hover,
+.currency-filter .btn:not(.btn-accent):focus {
+    background-color: #3a3a3a;
+    color: #fff;
+}
+
+/* При наведении на выделенную кнопку */
+.currency-filter .btn.btn-accent:hover,
+.currency-filter .btn.btn-accent:focus {
+    background-color: #7b73ff;
+    color: #fff;
+}
+
+/* Активное состояние кнопки при клике */
+.currency-filter .btn:active {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+}
+
+/* Чтобы кнопки не исчезали при фокусе */
+.currency-filter .btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.4);
+}
+/* Кнопка "Далее" */
+.btn-submit {
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+/* Наведение и фокус */
+.btn-submit:hover,
+.btn-submit:focus {
+    background-color: #7b73ff;
+    color: #fff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.4);
+}
+
+/* Активное состояние */
+.btn-submit:active {
+    background-color: #5a53e0;
+    transform: translateY(1px);
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+}
+
+.currency-item {
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.hover-bg:hover {
+    background-color: #383838;
+}
+
+.text-accent {
+    color: #6c63ff;
+}
+
+.custom-muted:not(:last-child) {
+    margin-right: 20px;
+    color: #ffffff !important;
+}
+.currency-item.selected {
+    background-color: #6c63ff;
+    color: #fff;
+}
+
+.currency-item.selected .custom-muted {
+    color: #fff;
+}
+
+.form-control[readonly] {
+    background-color: #2d2d2d !important; /* как у остальных input */
+    color: #fff !important;
+    opacity: 1 !important;
+    cursor: not-allowed;
+}

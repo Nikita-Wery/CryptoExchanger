@@ -1,0 +1,168 @@
+/* Общие стили */
+body {
+    background-color: #1e1e1e;
+    color: #ddd;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #2a2a2a;
+    border-bottom: 1px solid #333;
+}
+
+.header_logo .logo {
+    width: 32px;
+    height: 32px;
+}
+
+.nav-link {
+    color: #aaa !important;
+    margin: 0 6px;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+}
+
+/* Левая колонка: меню подстраниц */
+.account_left {
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 16px;
+    min-width: 220px;
+}
+
+.options_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.option_item {
+    margin-bottom: 0.5rem;
+}
+
+.account_btn {
+    width: 100%;
+    text-align: left;
+    background-color: #2a2a2a !important;
+    color: #ddd !important;
+    border: 1px solid #444 !important;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.account_btn:hover,
+.account_btn:focus {
+    background-color: #383838 !important;
+    color: #fff !important;
+    outline: none;
+}
+
+.account_btn.active {
+    background-color: #6c63ff !important;
+    color: #fff !important;
+    border-color: #6c63ff !important;
+}
+
+/* Правая колонка: список сделок */
+.account_right {
+    flex: 1;
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    color: #ddd;
+}
+
+.account_right h3 {
+    margin-bottom: 1rem;
+    color: #ddd;
+}
+
+/* Список ul */
+.orders_list {
+    padding: 0;
+    margin: 0;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+/* Каждый li = сделка */
+.order_item {
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+/* Блок внутри li: заголовок + значение */
+.order_block {
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+}
+
+/* Заголовок каждого блока */
+.order_label {
+    font-size: 0.75rem;
+    color: #888;
+    margin-bottom: 0.25rem;
+}
+
+/* Значение каждого блока */
+.order_value {
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+/* Статус сделки */
+.order_value .status {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+/* Цвета статусов */
+.status.pending { background-color: #ffc107; color: #000; }
+.status.processing { background-color: #0dcaf0; color: #000; }
+.status.completed { background-color: #198754; color: #fff; }
+.status.cancelled { background-color: #dc3545; color: #fff; }
+.status.failed { background-color: #6c757d; color: #fff; }
+
+/* Скролл для списка */
+.orders_list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.orders_list::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Сообщение о пустом списке */
+.no_orders {
+    text-align: center;
+    font-size: 1rem;
+    color: #aaa;
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 2rem;
+}

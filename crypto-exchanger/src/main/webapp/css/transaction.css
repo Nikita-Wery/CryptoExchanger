@@ -1,0 +1,170 @@
+/* Центрирование страницы */
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: #1e1e1e;
+    color: #ddd;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page_wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Основной блок */
+.transaction_box {
+    background: #2a2a2a;
+    padding: 32px;
+    border-radius: 16px;
+    width: 420px;
+    border: 1px solid #333;
+    box-shadow: 0 0 20px rgba(0,0,0,0.35);
+    text-align: center;
+}
+
+/* Заголовок */
+.tr_title {
+    margin-bottom: 24px;
+    font-size: 22px;
+}
+
+/* Отдаёте / Получаете */
+.exchange_block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.exchange_col {
+    width: 48%;
+    background: #1e1e1e;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #444;
+}
+
+.label {
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 6px;
+}
+
+.value {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+}
+
+.currency_icon {
+    width: 22px;
+    height: 22px;
+}
+
+/* Оплата */
+.pay_title {
+    margin-top: 10px;
+    margin-bottom: 14px;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Таблица оплаты */
+.payment_table {
+    background: #1e1e1e;
+    border: 1px solid #444;
+    border-radius: 12px;
+    margin-bottom: 26px;
+    padding: 12px 16px;
+}
+
+.pay_header,
+.pay_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.pay_header {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.wallet_value,
+.amount_value {
+    font-size: 16px;
+    padding: 6px 0;
+}
+
+/* Кнопка */
+.btn_pay {
+    width: 100%;
+    padding: 12px;
+    background: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn_pay:hover {
+    background: #5952e0;
+}
+
+/* Контейнер с двумя блоками */
+.payment_fields {
+    display: flex;
+    flex-direction: column;
+    gap: 22px; /* стало больше для визуального воздуха */
+    margin-bottom: 32px; /* отступ до кнопки */
+}
+
+/* Общий стиль блока */
+.payment_block {
+    background: #1e1e1e;
+    padding: 16px 20px;
+    border-radius: 14px;
+
+    /* Яркая красивая обводка */
+    border: 2px solid #6c63ff;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Подписи */
+.payment_label {
+    font-size: 13px;
+    color: #bbb;
+    margin-bottom: 6px;
+}
+
+/* Значения */
+.payment_value {
+    font-size: 17px;
+    color: #f0f0f0;
+    cursor: pointer;
+    user-select: all;
+    transition: 0.2s;
+
+    /* Чтобы текст не вылезал */
+    word-break: break-word;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+/* Эффект копирования */
+.payment_value.copied {
+    color: #6c63ff;
+}

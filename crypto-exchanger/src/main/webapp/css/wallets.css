@@ -1,0 +1,202 @@
+/* ======= Общий фон и базовые стили ======= */
+body {
+    background-color: #1e1e1e;
+    color: #ddd;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #2a2a2a;
+    border-bottom: 1px solid #333;
+}
+
+.header_logo .logo {
+    width: 32px;
+    height: 32px;
+}
+
+.nav-link {
+    color: #aaa !important;
+    margin: 0 6px;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+}
+
+/* ======= Левая колонка меню ======= */
+.account_left {
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 16px;
+    min-width: 220px;
+}
+
+.options_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.option_item {
+    margin-bottom: 0.5rem;
+}
+
+.account_btn {
+    width: 100%;
+    text-align: left;
+    background-color: #2a2a2a !important;
+    color: #ddd !important;
+    border: 1px solid #444 !important;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.account_btn:hover,
+.account_btn:focus {
+    background-color: #383838 !important;
+    color: #fff !important;
+    outline: none;
+}
+
+.account_btn.active {
+    background-color: #6c63ff !important;
+    color: #fff !important;
+    border-color: #6c63ff !important;
+}
+
+/* ======= Правая колонка: Кошельки (полностью заменено) ======= */
+.account_right {
+    flex: 1;
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    color: #ddd;
+}
+
+.account_right h3 {
+    margin-bottom: 1rem;
+    color: #ddd;
+}
+
+/* ======= Список кошельков ======= */
+.wallets_list {
+    padding: 0;
+    margin: 0;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.wallet_item {
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.wallet_icon .icon_currency {
+    width: 40px;
+    height: 40px;
+}
+
+.wallet_info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.wallet_block {
+    display: flex;
+    flex-direction: column;
+}
+
+.wallet_label {
+    font-size: 0.75rem;
+    color: #888;
+    margin-bottom: 0.25rem;
+}
+
+.wallet_value {
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
+.copy_wallet {
+    cursor: pointer;
+    user-select: all;
+}
+
+.copy_wallet:hover {
+    color: #6c63ff;
+}
+
+.no_wallets {
+    text-align: center;
+    font-size: 1rem;
+    color: #aaa;
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+/* ======= Скролл ======= */
+.wallets_list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.wallets_list::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* ======= Контейнер ======= */
+.d-lg-flex {
+    display: flex !important;
+    gap: 1rem;
+}
+
+/* Ссылки в меню аккаунта ведут себя как полноценные кнопки */
+.account_link {
+    display: block;             /* Занимает всю ширину родителя */
+    width: 100%;                /* Полная ширина */
+    box-sizing: border-box;     /* Чтобы padding и border учитывались */
+    padding: 10px 16px;         /* Как у оригинальных кнопок */
+    border-radius: 8px;         /* Закругления */
+    border: 1px solid #444;     /* Граница */
+    background-color: #2a2a2a;  /* Цвет кнопки */
+    color: #ddd;                /* Цвет текста */
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    text-decoration: none;      /* Убираем подчеркивание */
+    transition: all 0.2s ease;
+}
+
+.account_link:hover,
+.account_link:focus {
+    background-color: #383838;
+    color: #fff;
+    outline: none;
+}
+
+.account_link.active {
+    background-color: #6c63ff;
+    color: #fff;
+    border-color: #6c63ff;
+}

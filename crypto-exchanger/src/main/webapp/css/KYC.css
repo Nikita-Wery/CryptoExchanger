@@ -1,0 +1,29 @@
+/* Ссылки в меню аккаунта ведут себя как полноценные кнопки */
+.account_link {
+    display: block;             /* Занимает всю ширину родителя */
+    width: 100%;                /* Полная ширина */
+    box-sizing: border-box;     /* Чтобы padding и border учитывались */
+    padding: 10px 16px;         /* Как у оригинальных кнопок */
+    border-radius: 8px;         /* Закругления */
+    border: 1px solid #444;     /* Граница */
+    background-color: #2a2a2a;  /* Цвет кнопки */
+    color: #ddd;                /* Цвет текста */
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    text-decoration: none;      /* Убираем подчеркивание */
+    transition: all 0.2s ease;
+}
+
+.account_link:hover,
+.account_link:focus {
+    background-color: #383838;
+    color: #fff;
+    outline: none;
+}
+
+.account_link.active {
+    background-color: #6c63ff;
+    color: #fff;
+    border-color: #6c63ff;
+}

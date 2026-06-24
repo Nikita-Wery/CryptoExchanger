@@ -1,0 +1,153 @@
+/* ========== login.css (исправленный) ========== */
+
+/* box-sizing — важен для предотвращения "вылезания" элементов */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Центр всей страницы */
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    color: #ddd;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Контейнер */
+.auth_wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth_box {
+    background-color: #2a2a2a;
+    padding: 32px;
+    border-radius: 16px;
+    width: 360px;            /* фиксированная удобная ширина */
+    max-width: calc(100% - 40px);
+    text-align: center;
+    border: 1px solid #333;
+    box-shadow: 0 0 20px rgba(0,0,0,0.35);
+    overflow: visible;       /* разрешаем абсолютным элементам видимость */
+}
+
+/* Заголовок */
+.auth_title {
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Поля ввода */
+.input_group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.input_group label {
+    margin-bottom: 6px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* Обязательное правило: input занимает всю доступную ширину и учитывает padding/border */
+.input_group input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #1e1e1e;
+    color: #ddd;
+    font-size: 15px;
+    outline: none;
+}
+
+/* Фокус */
+.input_group input:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 4px rgba(108,99,255,0.06);
+}
+
+/* Пароль + глазик */
+.password_wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password_wrapper input {
+    /* Доп. padding-right чтобы не перекрываться глазиком.
+       40px — более чем достаточно. */
+    padding-right: 44px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Иконка-глазик: абсолютная, внутри password_wrapper */
+.toggle_password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    color: #bbb;
+    padding: 4px;
+    border-radius: 6px;
+    transition: color 0.15s, background 0.15s;
+}
+
+.toggle_password:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.03);
+}
+
+/* Кнопки */
+.btn_primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #6c63ff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background 0.12s;
+}
+
+.btn_primary:hover { background-color: #5750e8; }
+
+.btn_secondary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #3a3a3a;
+    border: 1px solid #555;
+    color: #ddd;
+    text-decoration: none;
+    transition: background 0.12s;
+}
+
+.btn_secondary:hover { background-color: #4a4a4a; }
+
+/* Подпись */
+.auth_hint {
+    margin-bottom: 10px;
+    color: #999;
+    font-size: 14px;
+}
